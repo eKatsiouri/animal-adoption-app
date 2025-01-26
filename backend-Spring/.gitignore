@@ -32,18 +32,3 @@ out/
 /dist/
 /nbdist/
 /.nb-gradle/
-
-### VS Code ###
-.vscode/
-# Angular cache
-/.angular/cache/
-
-# Vite dependencies
-vite/deps/
-
-# TypeScript build info
-.tsbuildinfo
-
-# Angular compiler database files
-angular-compiler.db
-angular-compiler.db-lo
