@@ -1,0 +1,43 @@
+.navbar-brand {
+    letter-spacing: 16px; 
+    line-height: 2; 
+    padding: 10px 50px; 
+    font-size: 1.5rem; 
+    color: white; 
+       
+  }
+  
+  .navbar {
+    background-color: #343a40; 
+  }
+
+  .nav-link{
+    letter-spacing: 4px;
+    font-size: 1rem;
+    font-weight: lighter;   
+  }
+
+  .navbar-nav {
+    margin-right: 80px;
+  }
+  .icon-link-hover {
+    text-decoration: none; 
+    color: white; 
+    letter-spacing: 4px;
+    font-size: 1rem;
+    font-weight: lighter;   
+  }
+  
+  .icon-link-hover:hover {
+    color: #ff6600;
+  }
+
+   #button {
+   display: flex; 
+    justify-content: flex-end;
+    align-items: center; 
+    gap: 1rem; 
+    margin-right: 20px;
+
+    }
+   

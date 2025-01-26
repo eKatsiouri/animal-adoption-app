@@ -1,0 +1,25 @@
+h2 {color: #ff6600 !important; 
+    font-weight: lighter;
+    letter-spacing: 2px; 
+}
+
+#info{
+   
+    padding: 2rem;
+    letter-spacing: 1px; 
+    line-height: 1.8; 
+    color: #333; 
+    font-weight: lighter;
+}
+
+ .icon-link-hover {
+    text-decoration: none; 
+    color:#ff6600;
+    letter-spacing: 4px;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  
+  .icon-link-hover:hover {
+    color: #ff6600;
+  }

@@ -1,0 +1,9 @@
+# Ignore build artifacts
+/node_modules/
+/dist/
+/tmp/
+*.log
+
+# Ignore editor config files
+.vscode/
+.idea/

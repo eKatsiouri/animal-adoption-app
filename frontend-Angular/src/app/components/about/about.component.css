@@ -1,0 +1,26 @@
+h4 {
+  font-weight: lighter;
+  letter-spacing: 3px;
+  font-size: 2rem; 
+}
+
+p {
+  line-height: 1.8;
+  font-weight: lighter;
+}
+
+.container {
+    font-family: "Segoe UI", sans-serif;
+    margin: auto; 
+    padding: 2rem;
+    letter-spacing: 1px; 
+    line-height: 1.8; 
+    color: #333; 
+    text-align: center; 
+  
+}
+
+.text-warning {
+  color: #ff6600 !important; 
+}
+

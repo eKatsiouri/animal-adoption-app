@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content:flex-start; 
+    min-height: 100vh; 
+  }
+  
+  .list-group-item {
+    margin-bottom: 30px;
+  }
+  
+  button {
+    margin-right: 20px; 
+  }
+
+
+  h2{
+    color: #ff6600 ;
+    font-weight: lighter;
+    letter-spacing: 3px;
+  }
+
+  #name{
+    color: #060606 ;
+    font-weight: lighter;
+    letter-spacing: 2px;
+  }
+

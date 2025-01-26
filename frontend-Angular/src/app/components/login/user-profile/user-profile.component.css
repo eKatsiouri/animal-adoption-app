@@ -1,0 +1,51 @@
+.container-fluid {
+    margin-top: 20px;
+  }
+  
+  h2.text-center {
+    font-size: 2rem;
+    color: #ff6600; 
+    margin-bottom: 20px;
+    font-weight: lighter;
+  }
+  
+
+  .card-body {
+    padding: 20px;
+    letter-spacing: 2px; 
+    font-weight: lighter;
+    line-height: 1.2;
+    color: #555;
+  }
+  
+  .card-body p {
+    margin-bottom: 10px;
+    font-size: 1.1rem; 
+  }
+  
+  .btn-secondary {
+    background-color: #5a6268; 
+    font-size: 1.1rem; 
+    font-weight: lighter;
+    letter-spacing: 2px; 
+    margin-bottom: 10px;
+  }
+  
+
+  
+  .btn-secondary:hover {
+    background-color: #fda76d; 
+  }
+
+  .btn-warning{
+    background-color: #fda76d; 
+    font-size: 1.1rem; 
+    font-weight: lighter;
+    letter-spacing: 2px; 
+    margin-bottom: 10px;
+  }
+  
+
+  .btn-warning:hover {
+    background-color: #5a6268; 
+  }

@@ -1,0 +1,29 @@
+.text-box {
+    font-family: "Segoe UI", sans-serif;
+    max-width: 600px; 
+    margin: auto; 
+    padding: 2rem;
+    letter-spacing: 1px; 
+    line-height: 1.8; 
+    color: #333; 
+    text-align: center; 
+    position: relative; 
+    top: -90px; 
+    left: -50px;
+  }
+  
+  .title {
+    letter-spacing: 3px;
+    font-size: 2rem; 
+    color: #ff6600;
+    font-weight: lighter; 
+    margin-bottom: 3rem; 
+  }
+  
+  .description {
+    font-size: 1.2rem; 
+    color: #000000; 
+    font-weight:lighter; 
+  }
+  
+ 

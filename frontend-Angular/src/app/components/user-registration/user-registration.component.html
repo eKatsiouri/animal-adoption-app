@@ -1,0 +1,83 @@
+<div class="container"  >
+
+<h4> Register User</h4>
+
+
+    <div   class="">
+        <form [formGroup]="form" class="d-flex flex-column gap-3 "  style="width: 70vh;">
+            <div class="form-group">
+                <label for="firstName">Firstname:</label>
+                <input type="text" id="firstName" class="form-control" formControlName="firstName">
+                <small *ngIf="form.get('firstName')?.invalid && form.get('firstName')?.touched" class="text-danger">
+                    Firstname is required.
+                  </small>
+            </div>
+            <div>
+                <label for="lastName">Lastname</label>
+                <input type="text" id="lastName" class="form-control" formControlName="lastName">
+                <small *ngIf="form.get('lastName')?.invalid && form.get('lastName')?.touched" class="text-danger">
+                    Lastname is required.
+                  </small>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="form-control" formControlName="email">
+                <small *ngIf="form.get('email')?.invalid && form.get('email')?.touched" class="text-danger">
+                    Please enter a valid email address.
+                  </small>
+            </div>
+            <div>
+                <label for="username">Username</label>
+                <input type="text" id="username" class="form-control" formControlName="username">
+                <small *ngIf="form.get('username')?.invalid && form.get('username')?.touched" class="text-danger">
+                    Username is required.
+                  </small>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" class="form-control" formControlName="password">
+                <small *ngIf="form.get('password')?.invalid && form.get('password')?.touched" class="text-danger">
+                    Password is required and must be at least 4 characters long.
+                  </small>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">confirmPassword</label>
+                <input type="password" id="confirmPassword" class="form-control" formControlName="confirmPassword">
+                <small *ngIf="form.get('confirmPassword')?.invalid && form.get('confirmPassword')?.touched" class="text-danger">
+                    Confirm Password is required.
+                  </small>
+            </div>
+            <div>
+                <label for="phoneNumber">PhoneNumber:</label>
+                <input type="text" id="phoneNumber" class="form-control" formControlName="phoneNumber">
+                <small *ngIf="form.get('phoneNumber')?.invalid && form.get('phoneNumber')?.touched" class="text-danger">
+                    Phone number is required.
+                  </small>
+            </div>
+            <div class="form-group">
+                <label for="address"> address:</label>
+                <input type="text" id="address" class="form-control" formControlName="address">
+            </div>
+            <div>
+                <label for="ssn">ssn:</label>
+                <input type="text" id="ssn" class="form-control" formControlName="ssn">
+                <small *ngIf="form.get('ssn')?.invalid && form.get('ssn')?.touched" class="text-danger">
+                    SSN is required.
+                  </small>
+            </div>
+           
+
+        </form>
+
+            <button type="submit" class="btn btn-secondary" [disabled]="!form.valid"  (click)="onSubmit()">
+               Register
+            </button> 
+
+        </div>
+   
+
+    </div>
+    
+      
+    
+

@@ -1,0 +1,29 @@
+<div class="container-fluid d-flex justify-content-center">
+  <ul class="list-group ">
+    <h2 class="text-center mb-4" >All Animals </h2>
+    <div id="info">
+    <li 
+      *ngFor="let animal of animals" 
+      class="list-group-item d-flex justify-content-around align-items-center"
+    >
+      <div class="ms-5 me-auto ">
+        <h2>Name: {{ animal.name }}</h2>
+        <p>Gender: {{ animal.gender }}</p>
+        <p>Type: {{ animal.animalType }}</p>
+        <p>Age: {{ animal.age }} years</p>
+        <a class="d-flex icon-link-hover "  type="button"   
+                RouterLink="['/animals', animal.id]" (click)="MoreInfo(animal.id)">More info for {{animal.name}}...</a>
+      </div>
+    
+      <div *ngIf="animal.image">
+        <img
+          [src]="animal.image"
+          alt="{{ animal.name }}"
+          class="img-thumbnail"
+          style="max-width: 200px; height: auto;"
+        />
+      </div>
+    </li>
+  </div>
+  </ul>
+</div>

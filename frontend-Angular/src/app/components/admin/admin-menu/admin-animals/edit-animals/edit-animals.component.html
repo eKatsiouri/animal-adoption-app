@@ -1,0 +1,147 @@
+<div class="container display-flex flex-column align-items-center" *ngIf="animalForm">
+    <h3>Edit Animal Info</h3>
+  
+    <form [formGroup]="animalForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          class="form-control"
+          formControlName="name"
+          required
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select
+          id="gender"
+          class="form-control"
+          formControlName="gender"
+          required
+        >
+          <option value="MALE">Male</option>
+          <option value="FEMALE">Female</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="animalType">Animal Type</label>
+        <select
+          id="animalType"
+          class="form-control"
+          formControlName="animalType"
+          required
+        >
+          <option value="DOG">Dog</option>
+          <option value="CAT">Cat</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input
+          type="number"
+          id="age"
+          class="form-control"
+          formControlName="age"
+          required
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="adopted">Adopted</label>
+        <input
+          type="checkbox"
+          id="adopted"
+          class="form-check-input"
+          formControlName="adopted"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="isVaccinated">Vaccinated</label>
+        <input
+          type="checkbox"
+          id="isVaccinated"
+          class="form-check-input"
+          formControlName="isVaccinated"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="isNeutered">Neutered</label>
+        <input
+          type="checkbox"
+          id="isNeutered"
+          class="form-check-input"
+          formControlName="isNeutered"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="color">Color</label>
+        <input
+          type="text"
+          id="color"
+          class="form-control"
+          formControlName="color"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="breed">Breed</label>
+        <input
+          type="text"
+          id="breed"
+          class="form-control"
+          formControlName="breed"
+        />
+      </div>
+  
+    <div class="form-group">
+      <label for="hasSpecialDiet">Special Diet</label>
+      <input
+        type="checkbox"
+        id="hasSpecialDiet"
+        class="form-check-input"
+        formControlName="hasSpecialDiet"
+      />
+    </div>
+
+
+    <div class="form-group">
+      <label for="isFriendlyWithKids">Friendly with Kids</label>
+      <input
+        type="checkbox"
+        id="isFriendlyWithKids"
+        class="form-check-input"
+        formControlName="isFriendlyWithKids"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="isFriendlyWithOtherPets">Friendly with Other Pets</label>
+      <input
+        type="checkbox"
+        id="isFriendlyWithOtherPets"
+        class="form-check-input"
+        formControlName="isFriendlyWithOtherPets"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="isMicrochipped">Microchipped</label>
+      <input
+        type="checkbox"
+        id="isMicrochipped"
+        class="form-check-input"
+        formControlName="isMicrochipped"
+      />
+    </div>
+  
+      <button type="submit" class="btn btn-secondary mt-3">Save</button>
+    </form>
+  </div>
+  

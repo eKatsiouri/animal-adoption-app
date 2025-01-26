@@ -1,0 +1,40 @@
+<div *ngIf="animal" class="container-fluid d-flex justify-content-center">
+
+   <ul class="list-group ">
+    <h2 class="text-center mb-4" >Animals Availiable For Adoption </h2>
+    <div id="info">
+    <li 
+      *ngFor="let a of animal" 
+      class="list-group-item d-flex justify-content-around align-items-center"
+    >
+      <div class="ms-5 me-auto ">
+        <h2>Name: {{ a.name }}</h2>
+        <p>Gender: {{a.gender }}</p>
+        <p>Type: {{a.animalType }}</p>
+        <p>Age: {{a.age }} years</p>
+        <p>Adopted: {{a.adopted ? 'Yes' : 'No' }}</p>
+        <a class="d-flex icon-link-hover"  type="button"   
+         RouterLink="['/animals', animal.id]" (click)="MoreInfo(a.id)">More info for {{a.name}}...</a>
+     
+      </div>
+    
+      <div *ngIf="a?.image">
+        <img
+          [src]=""
+          alt="{{a?.name }}"
+          class="img-thumbnail"
+          style="max-width: 200px; height: auto;"
+        />
+      </div>
+    </li>
+    </div>
+  </ul>
+      </div>
+    
+     
+  
+
+
+
+
+

@@ -1,0 +1,23 @@
+<div class="container-fluid flex-column justify-content-center gap-3  " style="width: 50vh;"  >
+
+<h3>Login User</h3>
+
+<form [formGroup]="form"  (ngSubmit)="OnSubmit()">
+    <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" class="form-control" formControlName="username">
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" class="form-control" formControlName="password">
+    </div>
+    <button type="submit" class="btn btn-secondary" [disabled]="!form.valid">
+        Login
+    </button>
+    @if (invalidLogin){
+        <div class="alert alert-danger">
+            <strong>Error:</strong> Invalid username or password
+        </div>
+    }
+</form>
+</div>

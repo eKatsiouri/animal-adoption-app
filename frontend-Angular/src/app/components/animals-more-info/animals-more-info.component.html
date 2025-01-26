@@ -1,0 +1,90 @@
+<div class="container-fluid d-flex justify-content-center align-items-center  "*ngIf="animalDetails ">
+   
+  <div class="d-flex justify-content-center flex-column text-right">
+  
+    <h2    *ngIf=" !animalDetails.animal.adopted">Adopt our {{ animalDetails.animal.name }}!!!</h2>
+    <div *ngIf="animalDetails.animal.image">
+        <img
+          [src]=""
+          alt="{{animalDetails.animal.name }}"
+          class="img-thumbnail"
+          style="max-width: 200px; height: auto;"
+        />
+      </div>
+    <div  id="info" class="container ">
+        <h2>Name: {{ animalDetails.animal.name }}</h2>
+        <p>Gender: {{ animalDetails.animal.gender }}</p>
+        <p>Type: {{animalDetails.animal.animalType }}</p>
+        <p>Age: {{animalDetails.animal.age }} years</p>
+        <p>Adopted: {{animalDetails.animal.adopted ? 'Yes' : 'No' }}</p>
+    
+
+        <p>Breed:   {{animalDetails.moreInfo?.breed}}</p>
+        <p>Color:   {{animalDetails.moreInfo?.color}}</p>
+        <p>Has Special Diet:   {{animalDetails.moreInfo?.hasSpecialDiet}}</p>
+        <p>Is Friedly With Kids:   {{animalDetails.moreInfo?.isFriendlyWithKids}}</p>
+        <p>Is Friendly With Other Pets:   {{animalDetails.moreInfo?.isFriendlyWithOtherPets}}</p>
+        <p>Is Microchipped:   {{animalDetails.moreInfo?.isMicrochipped}}</p>
+        <p>Is Neutered:   {{animalDetails.moreInfo?.isNeutered}}</p>
+        <p>Is Vaccinated:   {{animalDetails.moreInfo?.isVaccinated}}</p>
+         
+
+        
+      </div>
+
+
+  
+
+
+<button
+type="button"
+class="btn btn-secondary  " *ngIf="!animalDetails.animal.adopted "
+(click)="openAdoptionRequestForm() "
+>
+Request Adoption for {{ animalDetails.animal.name }}
+</button>
+</div>
+<div
+class="modal fade"
+id="adoptionRequestModal"
+tabindex="-1"
+role="dialog"
+aria-labelledby="adoptionRequestLabel"
+[ngClass]="{ show: isModalOpen }"
+[ngStyle]="{ display: isModalOpen ? 'block' : 'none' }"
+>
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="adoptionRequestLabel">
+        Adoption Request for {{ animalDetails.animal.name }}
+      </h5>
+      <button
+        type="button"
+        class="btn-close"
+        (click)="closeModal()"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="modal-body">
+    
+      <ng-container *ngIf="!userService.isUserLoggedIn()">
+        <p>You need to log in to submit an adoption request.</p>
+        <div class="d-flex justify-content-end">
+          <button class="btn btn-primary me-2" (click)="openLogin()">Login</button>
+          <button class="btn btn-secondary" (click)="openSignup()">Sign Up</button>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="userService.isUserLoggedIn() ">
+        <app-adoption-requests 
+       
+        [animalId]="animalDetails.animal.id"
+        >
+        </app-adoption-requests>
+      </ng-container>
+
+    </div>
+    
+  </div>
+</div>
+</div>

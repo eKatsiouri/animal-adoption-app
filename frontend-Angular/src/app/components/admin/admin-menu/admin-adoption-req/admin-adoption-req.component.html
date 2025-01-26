@@ -1,0 +1,45 @@
+<div class="container mt-4">
+    <h3>Adoption Requests</h3>
+
+    <div *ngIf="adoptionRequests.length > 0">
+      <table class="table ">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Animal Name</th>            
+            <th>Status</th>
+            <th>Created At</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let request of adoptionRequests">
+           
+            <td>
+                <a *ngIf="request.username" [routerLink]="['/login/user-profile', request.username]">
+                  {{ request.username }}
+                </a>
+                <td>
+                  <a  [routerLink]="['/all-animals/', request.animalId]">
+                    {{ request.animalName }}
+                  </a>
+              </td>
+            
+              
+            <td>{{ request.requestDate | date: 'dd/MM/yyyy'}}</td>
+            <td>{{ request.adoptionRequestStatus }}</td>
+            <button 
+            class="btn btn-secondary btn-sm" 
+            [routerLink]="['/admin/adoption/update', request.id]">
+            Change Status
+          </button>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+   
+    <div *ngIf="adoptionRequests.length === 0">
+      <p class="alert alert-warning">No adoption requests found.</p>
+    </div>
+  </div>
+  

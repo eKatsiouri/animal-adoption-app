@@ -1,0 +1,58 @@
+<div class="container mt-5">
+    <h3>Change Adoption Request Status</h3>
+  
+    <div *ngIf="adoptionRequest">
+      <form [formGroup]="form">
+        <div class="mb-3">
+          <label for="username" class="form-label">Username:</label>
+          <input
+            type="text"
+            id="username"
+            class="form-control"
+            formControlName="username"
+            readonly
+          />
+        </div>
+  
+        <div class="mb-3">
+          <label for="animalName" class="form-label">Animal Name:</label>
+          <input
+            type="text"
+            id="animalName"
+            class="form-control"
+            formControlName="animalName"
+            readonly
+          />
+        </div>
+
+     
+        <div class="mb-3">
+          <label for="newStatus" class="form-label">Update Status:</label>
+          <select
+            id="newStatus"
+            class="form-select"
+            formControlName="newStatus"
+            required
+          >
+            <option value="" disabled selected>Select a status</option>
+            <option *ngFor="let status of statusOptions" [value]="status">
+              {{ status }}
+            </option>
+          </select>
+        </div>
+  
+        <button
+          class="btn btn-secondary"
+          (click)="updateStatus()"
+          [disabled]="!form.get('newStatus')!.valid"
+        >
+          Update Status
+        </button>
+      </form>
+  
+      <div *ngIf="!adoptionRequest" class="alert alert-danger mt-3">
+        <p>Adoption request not found.</p>
+      </div>
+    </div>
+  </div>
+  

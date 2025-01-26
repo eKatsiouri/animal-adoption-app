@@ -1,0 +1,53 @@
+<div *ngIf="!user">Loading...</div>
+
+<div class="container-fluid" *ngIf="user">
+  <h2 class="text-center">User Profile</h2>
+  <div class="card mx-auto" style="max-width: 600px;">
+    <div class="card-body">
+      <p><strong>Firstname:</strong> {{ user.firstname }}</p>
+      <p><strong>Lastname:</strong> {{ user.lastname }}</p>
+      <p><strong>Username:</strong> {{ user.username }}</p>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>Phone Number:</strong> {{ user.phoneNumber }}</p>
+      <p><strong>Address:</strong> {{ user.address }}</p>
+      <p><strong>SSN:</strong> {{ user.ssn }}</p>
+      <p><strong>Role:</strong> {{ user.role }}</p>
+      <p><strong>Adoption Requests for: </strong></p>
+      <div *ngFor="let request of user.adoptionRequests">
+        <div class="d-flex align-items-center">
+          <div
+            class="btn btn-secondary btn-sm me-4"
+            style="width: 100px;"
+            routerLink="/all-animals/{{ request.animalId }}"
+          >
+            {{ request.animalName }}
+          </div>
+
+          <p>
+            Request Date: {{ request.requestDate | date: 'dd/MM/yyyy' }} -- Status:
+            {{ request.adoptionRequestStatus }}
+          </p>
+        </div>
+      </div>
+      <div>
+       
+        <button
+          *ngIf="user.role === 'ADMIN'"
+          class="btn btn-warning"
+          routerLink="/login/admin"
+        >
+          Go to Admin Menu
+        </button>
+
+        <button
+    
+          class="btn btn-warning"
+          routerLink="/login/user-profile/{{user.username}}/edit"
+        >
+          Edit Profile
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+   

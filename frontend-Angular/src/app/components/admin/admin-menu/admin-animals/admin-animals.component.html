@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>Manage Animals</h2>
+  
+    <button class="btn btn-secondary"  routerLink="/admin/animals/create">Add Animal</button>
+  
+    <div class=""  *ngFor="let a of animals">
+      <button class="btn " id="name" style="width: 100px;" routerLink = "/all-animals/{{a.id}}">{{a.name }}</button>
+      <button class="btn-secondary  " id="name" routerLink = "{{a.id}}/edit">Edit</button>
+      <button class="btn-dark   " id="name" (click)="deleteAnimal(a.id)">Delete</button>
+    </div>
+  </div> 

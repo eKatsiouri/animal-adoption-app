@@ -1,0 +1,22 @@
+h2 {color: #ff6600 !important; 
+    font-weight: lighter;
+    letter-spacing: 3px; 
+}
+
+#info{
+    
+   
+    padding: 1rem;
+    letter-spacing: 1px; 
+    line-height: 1; 
+    color: #333; 
+    font-weight: lighter;
+}
+
+button.btn-secondary:hover {
+    background-color: #ff6600;
+    color: #fff; 
+    border-color: #ff6600; 
+    
+  }
+  
