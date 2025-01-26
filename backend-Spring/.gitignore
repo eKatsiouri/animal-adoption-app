@@ -32,3 +32,8 @@ out/
 /dist/
 /nbdist/
 /.nb-gradle/
+# Logs
+*.log
+logs/
+target/
+build/
