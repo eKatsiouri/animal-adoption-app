@@ -1,6 +1,7 @@
 Adoption Animal Platform
 
-This project is a web-based platform for managing animal adoption, built with Spring Boot for the backend and Angular for the frontend. 
+This project is a web-based platform for managing animal adoption, developed as the final project for Coding Factory 6.
+It is built with Spring Boot for the backend and Angular for the frontend, showcasing a full-stack web application.
 The application allows administrators to manage animals and adoption requests, and users to submit requests and adopt animals.
 
 
