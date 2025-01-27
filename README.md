@@ -82,20 +82,35 @@ Shows all animals and animals available for adoption.
 ![More Info For A Specific Animal](./images/MoreInfoForASpecifinAnimal.JPG)
 
 Adoption Requests:
-Users can submit requests.
+Users can submit their adoption requests, and this page allows them to verify the details of the request before submitting.
 ![Verify The Adoption Request](./images/VerifyTheAdoptionRequest.JPG)
 ![Success Page](./images/SuccessPage.JPG)
 
 User Profile:
-User can view the status of their requests and edit their profile
+The User Profile page displays the user’s personal information and the status of any adoption requests they have submitted.
+![User Profile](./images/UserProfile.JPG)
+
+On this page, users can update their profile information, such as their contact details, password, or preferences.
 ![Edit User Profile](./images/EditUserProfile.JPG)
 
 Admin Dashboard:
 Accessible to administrators for managing animals and adoption requests.
+
+![Admin Profile](./images/AdminProfile.JPG)
+The Admin Menu provides options to access different areas such as animal management and adoption requests.
+![Admin Menu](./images/AdminMenu.JPG)
+
+Administrators can manage the list of animals here, including adding, editing, or removing animals from the system.
 ![Manage Animals](./images/ManageAnimals.JPG)
+This page allows administrators to review all pending adoption requests.
 ![Manage Adoptions](./images/ManagaAdoptions.JPG)
+Administrators can update the status of adoption requests ( Pending, Approved, Rejected).
 ![Change Adoption Request Status](./images/ChangeAdoptionRequestStatus.JPG)
+
+Administrators can add new animals to the system, providing details such as the animal’s name, species, and availability for adoption.
 ![Add Animal](./images/AddAnimal.JPG)
+
+administrators can modify the details of an existing animal.
 ![Edit Animal Info](./images/EditAnimalInfo.JPG)
 
 
