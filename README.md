@@ -69,20 +69,32 @@ Home and About Page:
 Displays a welcome message and brief introduction to the platform.
 
 Login and Signup:
-
 Allows users to register or log in to the platform.
+![Login Page](./images/LoginPage.JPG)
+![Register Page](./images/RegisterPage.JPG)
+
+
 
 Animal List:
+Shows all animals and animals available for adoption.
+![All Animals](./images/AllAnimals.JPG)
+![Animals For Adoption](./images/AnimalsForAdoption.JPG)
 
-Shows all animals available for adoption.
 
 Adoption Requests:
 
 Users can submit requests and view the status of their requests.
 
 Admin Dashboard:
-
 Accessible to administrators for managing animals and adoption requests.
+![Manage Animals](./images/ManageAnimals.JPG)
+
+![Manage Adoptions](./images/ManagaAdoptions.JPG)
+
+![Change Adoption Request Status](./images/ChangeAdoptionRequestStatus.JPG)
+![Add Animal](./images/AddAnimal.JPG)
+
+![Edit Animal Info](./images/EditAnimalInfo.JPG)
 
 
 
