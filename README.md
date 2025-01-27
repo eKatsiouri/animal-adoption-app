@@ -114,7 +114,9 @@ Administrators can add new animals to the system, providing details such as the 
 Administrators can modify the details of an existing animal.
 ![Edit Animal Info](./images/EditAnimalInfo.JPG)
 
-BUILD
+GETTING STARTED
+
+Open your command line (Terminal or Command Prompt) to run the following commands:
 Clone the repository:
 git clone https://github.com/your-username/animal-adoption-app.git
 
@@ -133,7 +135,16 @@ ng serve
 
 - Backend Setup (Spring Boot)
 Open the backend project in your preferred Java IDE (e.g., IntelliJ IDEA or Eclipse).
-Configure the database connection in src/main/resources/application-test.properties.
+Configure the database connection in src/main/resources/application-test.properties:
+
+spring.datasource.url=jdbc:mysql://localhost:3306/animal_adoption_db
+spring.datasource.username=root
+spring.datasource.password=your_password
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+
+
 Run the Spring Boot application.
 
 
@@ -147,7 +158,6 @@ Ensure MySQL is running.
 Update the application.properties file in the backend as mentioned above.
 
 Running the Backend:
-
 The application will automatically create the necessary tables if configured with spring.jpa.hibernate.ddl-auto=update.
 
 
