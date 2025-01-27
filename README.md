@@ -64,7 +64,7 @@ Angular Frontend Details
 The frontend application provides the following main pages:
 
 Home and About Page:
-![Homepage](../images/Homepage.JPG)
+![Homepage](./images/Homepage.JPG)
 
 Displays a welcome message and brief introduction to the platform.
 
