@@ -102,7 +102,7 @@ The Admin Menu provides options to access different areas such as animal managem
 
 Administrators can manage the list of animals here, including adding, editing, or removing animals from the system.
 ![Manage Animals](./images/ManageAnimals.JPG)
-This page allows administrators to review all pending adoption requests.
+Review all pending adoption requests.
 ![Manage Adoptions](./images/ManagaAdoptions.JPG)
 Administrators can update the status of adoption requests ( Pending, Approved, Rejected).
 ![Change Adoption Request Status](./images/ChangeAdoptionRequestStatus.JPG)
@@ -110,7 +110,7 @@ Administrators can update the status of adoption requests ( Pending, Approved, R
 Administrators can add new animals to the system, providing details such as the animal’s name, species, and availability for adoption.
 ![Add Animal](./images/AddAnimal.JPG)
 
-administrators can modify the details of an existing animal.
+Administrators can modify the details of an existing animal.
 ![Edit Animal Info](./images/EditAnimalInfo.JPG)
 
 
