@@ -8,6 +8,8 @@ import com.example.animal_adoption_app.model.User;
 import com.example.animal_adoption_app.model.enums.AdoptionRequestStatus;
 import com.example.animal_adoption_app.repository.AnimalRepository;
 import com.example.animal_adoption_app.repository.UserRepository;
+import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
 
@@ -16,12 +18,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
+@AllArgsConstructor
 public class Mapper {
 
 
-    private UserRepository userRepository;
-
-    private AnimalRepository animalRepository;
+    private final UserRepository userRepository;
+    private final AnimalRepository animalRepository;
 
     public Animal mapToAnimalEntity(AnimalDetailsDTO animalInsertDTO) {
         Animal animal = new Animal();

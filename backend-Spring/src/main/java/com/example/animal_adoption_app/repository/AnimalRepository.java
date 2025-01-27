@@ -1,6 +1,5 @@
 package com.example.animal_adoption_app.repository;
 
-import com.example.animal_adoption_app.dto.AnimalDetailsDTO;
 import com.example.animal_adoption_app.model.Animal;
 
 import org.springframework.data.jpa.repository.JpaRepository;

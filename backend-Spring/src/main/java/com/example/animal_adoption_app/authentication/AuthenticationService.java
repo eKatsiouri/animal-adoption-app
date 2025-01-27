@@ -21,8 +21,6 @@ public class AuthenticationService {
 
     private final AuthenticationManager authenticationManager;
     private final JwtService jwtService;
-
-
     private final UserRepository userRepository;
 
     public AuthenticationResponseDTO authenticate( AuthenticationRequestDTO dto)

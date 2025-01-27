@@ -6,13 +6,10 @@ import com.example.animal_adoption_app.exceptions.*;
 import com.example.animal_adoption_app.model.AdoptionRequest;
 import com.example.animal_adoption_app.model.Animal;
 import com.example.animal_adoption_app.model.enums.AdoptionRequestStatus;
-import com.example.animal_adoption_app.repository.MoreInfoRepository;
-import org.springframework.data.domain.Page;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+
 public interface IAnimalAdoptionService {
 
 

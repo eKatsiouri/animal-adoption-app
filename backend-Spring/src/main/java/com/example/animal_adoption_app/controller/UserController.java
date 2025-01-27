@@ -10,6 +10,8 @@ import com.example.animal_adoption_app.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,15 +24,11 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("login/user-details")
-
+@AllArgsConstructor
 public class UserController {
 
-    @Autowired
-    private UserService userService;
-
-
-    @Autowired
-    private Mapper mapper;
+    private final UserService userService;
+    private final Mapper mapper;
 
 
     @Operation(

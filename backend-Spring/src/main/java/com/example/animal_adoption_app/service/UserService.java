@@ -9,6 +9,7 @@ import com.example.animal_adoption_app.mapper.Mapper;
 import com.example.animal_adoption_app.model.User;
 import com.example.animal_adoption_app.model.enums.UserRole;
 import com.example.animal_adoption_app.repository.UserRepository;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -19,12 +20,12 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class UserService implements IUserService {
+
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
-    @Autowired
-    private Mapper mapper;
+    private final Mapper mapper;
 
 
     @Override

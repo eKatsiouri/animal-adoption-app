@@ -7,12 +7,10 @@ import com.example.animal_adoption_app.exceptions.UserAlreadyExistsException;
 import com.example.animal_adoption_app.exceptions.UserNotFoundException;
 import com.example.animal_adoption_app.model.User;
 import com.example.animal_adoption_app.model.enums.UserRole;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@Service
 public interface IUserService {
     User createUser(UserInsertDTO userDTO) throws UserAlreadyExistsException;
     User updateUser(Long userId, UserInsertDTO userDTO) throws UserNotFoundException;

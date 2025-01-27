@@ -2,11 +2,9 @@ package com.example.animal_adoption_app.repository;
 
 import com.example.animal_adoption_app.model.AdoptionRequest;
 import com.example.animal_adoption_app.model.enums.AdoptionRequestStatus;
-import jakarta.validation.constraints.NotNull;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 

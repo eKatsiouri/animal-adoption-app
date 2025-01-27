@@ -13,7 +13,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,15 +22,11 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/adoption-request")
+@AllArgsConstructor
 public class AdoptionController {
 
-    @Autowired
-    private AnimalAdoptionService animalAdoptionService;
-
-    @Autowired
-    private Mapper mapper;
-
-
+    private final AnimalAdoptionService animalAdoptionService;
+    private final Mapper mapper;
 
 
     @Operation(

@@ -14,6 +14,8 @@ import com.example.animal_adoption_app.repository.AnimalRepository;
 import com.example.animal_adoption_app.repository.MoreInfoRepository;
 import com.example.animal_adoption_app.repository.UserRepository;
 import jakarta.transaction.Transactional;
+import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -26,24 +28,19 @@ import java.util.Optional;
 
 
 @Service
+@AllArgsConstructor
 public class AnimalAdoptionService implements IAnimalAdoptionService{
 
-    @Autowired
+
     private final AnimalRepository animalRepository;
-    @Autowired
+
     private final MoreInfoRepository moreInfoRepository;
-    @Autowired
+
     private final UserRepository userRepository;
-    @Autowired
+
     private final AdoptionRequestRepository adoptionRequestRepository;
 
-    @Autowired
-    public AnimalAdoptionService(AnimalRepository animalRepository,UserRepository userRepository, MoreInfoRepository moreInfoRepository, AdoptionRequestRepository adoptionRequestRepository) {
-        this.animalRepository = animalRepository;
-        this.moreInfoRepository = moreInfoRepository;
-        this.userRepository = userRepository;
-        this.adoptionRequestRepository = adoptionRequestRepository;
-    }
+
 
     public List<Animal> getAnimals() throws AnimalNotFoundException {
         List<Animal> animals = animalRepository.findAll();

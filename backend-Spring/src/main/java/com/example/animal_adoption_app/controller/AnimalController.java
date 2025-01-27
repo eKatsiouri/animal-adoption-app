@@ -5,19 +5,16 @@ import com.example.animal_adoption_app.dto.AnimalReadOnlyDTO;
 import com.example.animal_adoption_app.exceptions.AnimalNotFoundException;
 import com.example.animal_adoption_app.mapper.Mapper;
 import com.example.animal_adoption_app.model.Animal;
-
-import com.example.animal_adoption_app.repository.AnimalRepository;
 import com.example.animal_adoption_app.service.AnimalAdoptionService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.method.P;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,20 +23,11 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/animals")
+@AllArgsConstructor
 public class AnimalController {
 
-
-    private AnimalRepository animalRepository;
-    private AnimalAdoptionService animalAdoptionService;
-
-    private Mapper mapper;
-
-    @Autowired
-    public AnimalController(AnimalAdoptionService animalAdoptionService, AnimalRepository animalRepository, Mapper mapper) {
-        this.animalAdoptionService = animalAdoptionService;
-        this.animalRepository = animalRepository;
-        this.mapper = mapper;
-    }
+    private final AnimalAdoptionService animalAdoptionService;
+    private final Mapper mapper;
 
     @Operation(
             summary = "Retrieve all animals",
