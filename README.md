@@ -64,9 +64,10 @@ Angular Frontend Details
 The frontend application provides the following main pages:
 
 Home and About Page:
-![Homepage](./images/Homepage.JPG)
-
 Displays a welcome message and brief introduction to the platform.
+![Homepage](./images/Homepage.JPG)
+![About Page](./images/AboutPage.JPG)
+
 
 Login and Signup:
 Allows users to register or log in to the platform.
@@ -74,26 +75,27 @@ Allows users to register or log in to the platform.
 ![Register Page](./images/RegisterPage.JPG)
 
 
-
 Animal List:
 Shows all animals and animals available for adoption.
 ![All Animals](./images/AllAnimals.JPG)
 ![Animals For Adoption](./images/AnimalsForAdoption.JPG)
-
+![More Info For A Specific Animal](./images/MoreInfoForASpecifinAnimal.JPG)
 
 Adoption Requests:
+Users can submit requests.
+![Verify The Adoption Request](./images/VerifyTheAdoptionRequest.JPG)
+![Success Page](./images/SuccessPage.JPG)
 
-Users can submit requests and view the status of their requests.
+User Profile:
+User can view the status of their requests and edit their profile
+![Edit User Profile](./images/EditUserProfile.JPG)
 
 Admin Dashboard:
 Accessible to administrators for managing animals and adoption requests.
 ![Manage Animals](./images/ManageAnimals.JPG)
-
 ![Manage Adoptions](./images/ManagaAdoptions.JPG)
-
 ![Change Adoption Request Status](./images/ChangeAdoptionRequestStatus.JPG)
 ![Add Animal](./images/AddAnimal.JPG)
-
 ![Edit Animal Info](./images/EditAnimalInfo.JPG)
 
 
