@@ -114,5 +114,55 @@ Administrators can add new animals to the system, providing details such as the 
 Administrators can modify the details of an existing animal.
 ![Edit Animal Info](./images/EditAnimalInfo.JPG)
 
+BUILD
+Clone the repository:
+git clone https://github.com/your-username/animal-adoption-app.git
+
+
+- Frontend Setup (Angular)
+Navigate to the frontend folder:
+Install the dependencies:
+npm install
+
+Update the base URL:
+Open src/app/services/environment.development.ts and update the myBaseUrl string to match your backend URL.
+
+Start the Angular development server:
+ng serve
+
+
+- Backend Setup (Spring Boot)
+Open the backend project in your preferred Java IDE (e.g., IntelliJ IDEA or Eclipse).
+Configure the database connection in src/main/resources/application-test.properties.
+Run the Spring Boot application.
+
+
+- Database Setup (MySQL)
+Create the Database:
+
+Run the following SQL command in your MySQL client:
+CREATE DATABASE animal_adoption_db;
+
+Ensure MySQL is running.
+Update the application.properties file in the backend as mentioned above.
+
+Running the Backend:
+
+The application will automatically create the necessary tables if configured with spring.jpa.hibernate.ddl-auto=update.
+
+
+Build and Deploy
+To build the Angular frontend:
+ng build
+The build output will be stored in the dist/ folder.
+Access the Application
+Once the server is running, open the application in your browser:
+
+Frontend: http://localhost:4200
+Backend: The backend REST API will run on the default Spring Boot port (http://localhost:8080).
+This provides clear and fast instructions for users to set up both the frontend, backend, and database for the application.
+
+
+
 
 
