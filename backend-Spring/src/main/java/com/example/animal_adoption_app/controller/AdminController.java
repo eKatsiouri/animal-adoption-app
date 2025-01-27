@@ -14,7 +14,6 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -152,43 +151,10 @@ public class AdminController {
         }
         }
 
-    @Operation(
-            summary = "Get all users",
-            description = "Retrieves all users",
-            responses = {
-                    @ApiResponse(responseCode = "200", description = "List of users retrieved successfully",
-                            content = @Content(schema = @Schema(implementation = UserReadOnlyDTO.class))),
-                            @ApiResponse(responseCode = "404", description = "No users found")}
-    )
-    @GetMapping("/users")
-    public ResponseEntity<List<UserReadOnlyDTO>> getAllUsers() {
-        try {
-            List<UserReadOnlyDTO> users =  userService.getAllUsers();
-            return ResponseEntity.ok(users);
-        } catch (UserNotFoundException e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
-        }
-
-    }
 
 
-    @Operation(
-            summary = "Delete a user",
-            description = "Deletes a user by ID",
-            responses = {
-                    @ApiResponse(responseCode = "204", description = "User deleted successfully"),
-                    @ApiResponse(responseCode = "404", description = "User not found")
-            }
-    )
-    @DeleteMapping("/users/{id}")
-    public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
-        try {
-            userService.deleteUser(id);
-            return ResponseEntity.noContent().build();
-        }catch (UserNotFoundException e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
-        }
-    }
+
+
 
 
 }
